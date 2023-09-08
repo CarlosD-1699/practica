@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+      <div class="mb-2">
+        <label class="form-label"> Nombre </label>
+
+        <input
+          class="form-control"
+          [formControl]="name"
+          type="text"
+          placeholder="Ingrese su Nombre"
+        />
+
+        <div
+          class="alert alert-danger mt-2"
+          [hidden]="name.valid || name.pristine"
+        >
+          El nombre es requerido
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label"> Email </label>
+
+        <input
+          class="form-control"
+          [formControl]="email"
+          type="email"
+          placeholder="Ingrese su Correo"
+        />
+
+        <div
+          class="alert alert-danger mt-2"
+          [hidden]="email.valid || email.pristine"
+        >
+          El correo es requerido
+        </div>
+      </div>
+
+      <button class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>

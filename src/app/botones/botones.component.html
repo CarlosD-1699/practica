@@ -1,0 +1,111 @@
+<div>
+  <!-- Clases dinamicas -->
+
+  <!-- <button
+    [class.disabled]="button_disabled"
+    class="btn btn-danger"
+    (click)="text_color = 'text-danger'"
+  >
+    Rojo
+  </button>
+  <button
+    [class.disabled]="button_disabled"
+    class="btn btn-success mx-2"
+    (click)="text_color = 'text-success'"
+  >
+    Verde
+  </button>
+  <button
+    [class.disabled]="button_disabled"
+    class="btn btn-primary"
+    (click)="text_color = 'text-primary'"
+  >
+    Azul
+  </button> -->
+
+  <!-- Formato atributo valor -->
+
+  <!-- <button
+    [class]="{
+        'disabled': button_disabled
+    }"
+    class="btn btn-danger"
+    (click)="text_color = 'text-danger'"
+  >
+    Rojo
+  </button>
+  <button
+    [class]="{
+        'disabled': button_disabled
+    }"
+    class="btn btn-success mx-2"
+    (click)="text_color = 'text-success'"
+  >
+    Verde
+  </button>
+  <button
+    [class]="{
+        'disabled': button_disabled
+    }"
+    class="btn btn-primary"
+    (click)="text_color = 'text-primary'"
+  >
+    Azul
+  </button> -->
+
+  <!-- Propiedades dinamicas -->
+
+  <!-- <button
+    [disabled]="button_disabled"
+    class="btn btn-danger"
+    (click)="text_color = 'text-danger'"
+  >
+    Rojo
+  </button>
+  <button
+    [disabled]="button_disabled"
+    class="btn btn-success mx-2"
+    (click)="text_color = 'text-success'"
+  >
+    Verde
+  </button>
+  <button
+    [disabled]="button_disabled"
+    class="btn btn-primary"
+    (click)="text_color = 'text-primary'"
+  >
+    Azul
+  </button>
+</div>
+
+<p [class]="text_color">Texto que va a cambiar de color</p>
+
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">
+  Activar/Desactivar
+</button> -->
+
+  <!-- Propiedades dinamicas 2 -->
+
+  <div>
+    <button
+      class="btn btn-primary mx-2 my-2"
+      (click)="
+        src =
+          'https://images.pexels.com/photos/8451450/pexels-photo-8451450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      "
+    >
+      Imagen 1
+    </button>
+    <button
+      class="btn btn-danger my-2"
+      (click)="
+        src =
+          'https://images.pexels.com/photos/11172558/pexels-photo-11172558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      "
+    >
+      Imagen 2
+    </button>
+  </div>
+
+  <img [src]="src" alt="" />
+</div>
