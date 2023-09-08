@@ -1,12 +1,12 @@
 <div class="card">
   <div class="card-body">
-    <form>
+    <form [formGroup]="formUser" (ngSubmit)="procesar()">
       <div class="mb-2">
         <label class="form-label"> Nombre </label>
 
         <input
           class="form-control"
-          [formControl]="name"
+          formControlName="name"
           type="text"
           placeholder="Ingrese su Nombre"
         />
@@ -24,7 +24,7 @@
 
         <input
           class="form-control"
-          [formControl]="email"
+          formControlName="email"
           type="email"
           placeholder="Ingrese su Correo"
         />
@@ -33,11 +33,19 @@
           class="alert alert-danger mt-2"
           [hidden]="email.valid || email.pristine"
         >
-          El correo es requerido
+          <span *ngIf="email.errors?.['required']">
+            El email es requerido
+          </span>
+
+          <span *ngIf="email.errors?.['email']">
+            El email debe ser valido
+          </span>
         </div>
       </div>
 
-      <button class="btn btn-primary">Enviar</button>
+      <button class="btn btn-primary" [disabled]="formUser.invalid">
+        Enviar
+      </button>
     </form>
   </div>
 </div>
