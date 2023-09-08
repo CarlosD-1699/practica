@@ -10,6 +10,7 @@ import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { Formulario2Component } from './formulario2/formulario2.component';
 import { Formulario3Component } from './formulario3/formulario3.component';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { Formulario3Component } from './formulario3/formulario3.component';
     SwitchComponent,
     Formulario2Component,
     Formulario3Component,
+    ChildrenComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
