@@ -11,7 +11,7 @@ import {
   templateUrl: './formulario3.component.html',
   styleUrls: ['./formulario3.component.css'],
 })
-export class Formulario3Component {
+export class Formulario3Component implements OnInit{
   constructor(private fb: FormBuilder) {}
 
   get name() {
